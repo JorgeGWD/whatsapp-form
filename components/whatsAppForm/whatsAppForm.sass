@@ -20,9 +20,46 @@
             color: #fff
             align-self: center
     .form-body
-        padding: 20px
+        padding: 20px 15px
         height: 340px
         text-align: center
+        overflow: auto
+        &::-webkit-scrollbar
+            width: 8px
+        &::-webkit-scrollbar-track
+            background-color: #f1f1f1
+        &::-webkit-scrollbar-thumb
+            background-color: #c1c1c1
+            border-radius: 5px
+        label
+            display: flex
+            padding: 8px 0px
+        input
+            padding: 8px 10px
+            margin-bottom: 5px
+            width: calc( 100% - 20px )
+            border: 1px solid #c4c4c4
+            border-radius: 5px
+        .checkbox
+            display: grid
+            grid-template-columns: auto 1fr
+            grid-gap: 5px
+            margin: 15px auto
+            width: 90%
+            input
+                margin: 0px
+                width: auto
+                align-self: center
+            p
+                font-size: 14px
+        button
+            padding: 12px
+            width: 100%
+            color: #fff
+            font-size: 18px
+            background-color: #277727
+            border: none
+            border-radius: 5px
     .form-footer
         padding: 5px
         background-color: #fff
