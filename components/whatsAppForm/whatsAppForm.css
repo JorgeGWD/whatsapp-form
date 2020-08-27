@@ -1,3 +1,53 @@
+.whats-app-form {
+  position: fixed;
+  left: 20px;
+  bottom: 90px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.whats-app-form .form-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  grid-gap: 10px;
+  padding: 15px;
+  background-color: #075E54;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.whats-app-form .form-header img {
+  width: 35px;
+  height: auto;
+}
+
+.whats-app-form .form-header p {
+  color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.whats-app-form .form-body {
+  height: 380px;
+}
+
+.whats-app-form .form-footer {
+  padding: 5px;
+  background-color: #fff;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.whats-app-form .form-footer p {
+  font-size: 14px;
+}
+
 .whats-app-button {
   position: fixed;
   left: 20px;

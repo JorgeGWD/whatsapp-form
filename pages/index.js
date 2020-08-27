@@ -9,6 +9,12 @@ export default function Home() {
         <title>Landing Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="body one">
+
+      </div>
+      <div className="body two">
+        
+      </div>
       <WhatsAppForm />
     </div>
   )
