@@ -11,8 +11,19 @@ const WhatsAppForm = () => {
                     <p>WhatsApp</p>
                 </div>
                 <div className="form-body">
+                    <p>Para comunicarte con un asesor <br/> necesitamos los siguientes datos</p>
                     <form action="">
-                        
+                        <label htmlFor="">Nombre</label>
+                        <input type="text" name="name" placeholder="Escribe aquí" />
+                        <label htmlFor="">Correo eléctronico</label>
+                        <input type="email" name="email" placeholder="Escribe aquí" />
+                        <label htmlFor="">Nº de WhatsApp</label>
+                        <input type="tel" name="phone" placeholder="321 1234567" />
+                        <div className="checkbox">
+                            <input type="checkbox"/>
+                            <p>He leído y acepto la política de privacidad</p>
+                        </div>
+                        <button type="submit">Iniciar Chat</button>
                     </form>
                 </div>
                 <div className="form-footer">

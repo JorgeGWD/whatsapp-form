@@ -33,7 +33,9 @@
 }
 
 .whats-app-form .form-body {
-  height: 380px;
+  padding: 20px;
+  height: 340px;
+  text-align: center;
 }
 
 .whats-app-form .form-footer {
