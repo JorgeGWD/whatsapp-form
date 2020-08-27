@@ -1,0 +1,29 @@
+.whats-app-button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  grid-gap: 5px;
+  padding: 13px 20px;
+  background-color: #075E54;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
+}
+
+.whats-app-button img {
+  width: 25px;
+  height: auto;
+}
+
+.whats-app-button p {
+  color: #fff;
+  font-size: 16px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=whatsAppForm.css.map */
