@@ -18,10 +18,12 @@
             height: auto
         p
             color: #fff
+            font-size: 18px
             align-self: center
     .form-body
-        padding: 20px 15px
+        padding: 18px 15px
         height: 340px
+        font-size: 17px
         text-align: center
         overflow: auto
         &::-webkit-scrollbar
@@ -34,6 +36,7 @@
         label
             display: flex
             padding: 8px 0px
+            font-size: 15px
         input
             padding: 8px 10px
             margin-bottom: 5px
@@ -53,13 +56,21 @@
             p
                 font-size: 14px
         button
-            padding: 12px
-            width: 100%
-            color: #fff
-            font-size: 18px
-            background-color: #277727
+            display: grid
+            //padding: 12px
+            width: calc( 100% - 20px )
             border: none
-            border-radius: 5px
+            // cursor: pointer
+            a
+                padding: 12px
+                width: 100%
+                color: #fff
+                font-size: 18px
+                background-color: #277727
+                border-radius: 5px
+                text-decoration: none
+                &:hover
+                    background-color: #5cb85c
     .form-footer
         padding: 5px
         background-color: #fff

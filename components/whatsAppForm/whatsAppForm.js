@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './whatsAppForm.css'
 import WhatsAppImg from '../../assets/icon_whatsapp.png'
+import Link from 'next/link'
 
 const WhatsAppForm = () => {
+
+    const [ data, useData ] = useState();
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <div className="whats-app-box">
             <div className="whats-app-form">
@@ -12,7 +20,7 @@ const WhatsAppForm = () => {
                 </div>
                 <div className="form-body">
                     <p>Para comunicarte con un asesor <br/> necesitamos los siguientes datos</p>
-                    <form action="">
+                    <form onSubmit={onSubmit}>
                         <label htmlFor="">Nombre</label>
                         <input type="text" name="name" placeholder="Escribe aquí" />
                         <label htmlFor="">Correo eléctronico</label>
@@ -23,7 +31,11 @@ const WhatsAppForm = () => {
                             <input type="checkbox"/>
                             <p>He leído y acepto la política de privacidad</p>
                         </div>
-                        <button type="submit">Iniciar Chat</button>
+                        <button type="submit">
+                            <a href="https://api.whatsapp.com/send?phone=577448989" target="_blank">
+                                Iniciar Chat
+                            </a>
+                        </button>
                     </form>
                 </div>
                 <div className="form-footer">

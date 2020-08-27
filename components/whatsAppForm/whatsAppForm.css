@@ -27,14 +27,16 @@
 
 .whats-app-form .form-header p {
   color: #fff;
+  font-size: 18px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
 .whats-app-form .form-body {
-  padding: 20px 15px;
+  padding: 18px 15px;
   height: 340px;
+  font-size: 17px;
   text-align: center;
   overflow: auto;
 }
@@ -57,6 +59,7 @@
   display: -ms-flexbox;
   display: flex;
   padding: 8px 0px;
+  font-size: 15px;
 }
 
 .whats-app-form .form-body input {
@@ -90,13 +93,24 @@
 }
 
 .whats-app-form .form-body button {
+  display: -ms-grid;
+  display: grid;
+  width: calc( 100% - 20px);
+  border: none;
+}
+
+.whats-app-form .form-body button a {
   padding: 12px;
   width: 100%;
   color: #fff;
   font-size: 18px;
   background-color: #277727;
-  border: none;
   border-radius: 5px;
+  text-decoration: none;
+}
+
+.whats-app-form .form-body button a:hover {
+  background-color: #5cb85c;
 }
 
 .whats-app-form .form-footer {
