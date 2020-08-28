@@ -14,7 +14,7 @@ const WhatsAppForm = () => {
 
     return (
         <div className="whats-app-box">
-            <div className={open ? "open" : null}>
+            <div className={open ? "whats-app-form" : "whats-app-form hide"}>
                 <div className="form-header">
                     <img src={WhatsAppImg} alt="WhatsApp"/>
                     <p>WhatsApp</p>
