@@ -18,6 +18,7 @@ const WhatsAppForm = () => {
                 <div className="form-header">
                     <img src={WhatsAppImg} alt="WhatsApp"/>
                     <p>WhatsApp</p>
+                    <p onClick={() => { setOpen(!open); }}>X</p>
                 </div>
                 <div className="form-body">
                     <p>Para comunicarte con un asesor <br/> necesitamos los siguientes datos</p>

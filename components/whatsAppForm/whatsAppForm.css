@@ -167,4 +167,8 @@ button.whats-app-button p {
       -ms-grid-row-align: center;
       align-self: center;
 }
+
+button.whats-app-button:focus {
+  outline: none;
+}
 /*# sourceMappingURL=whatsAppForm.css.map */
