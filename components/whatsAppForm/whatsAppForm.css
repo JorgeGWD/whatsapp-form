@@ -1,4 +1,5 @@
-.whats-app-form {
+.open {
+  z-index: 1000;
   position: fixed;
   left: 20px;
   bottom: 90px;
@@ -8,7 +9,7 @@
   overflow: hidden;
 }
 
-.whats-app-form .form-header {
+.open .form-header {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr auto;
@@ -20,12 +21,12 @@
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-.whats-app-form .form-header img {
+.open .form-header img {
   width: 35px;
   height: auto;
 }
 
-.whats-app-form .form-header p {
+.open .form-header p {
   color: #fff;
   font-size: 18px;
   -ms-flex-item-align: center;
@@ -33,7 +34,7 @@
       align-self: center;
 }
 
-.whats-app-form .form-body {
+.open .form-body {
   padding: 18px 15px;
   height: 340px;
   font-size: 17px;
@@ -41,20 +42,20 @@
   overflow: auto;
 }
 
-.whats-app-form .form-body::-webkit-scrollbar {
+.open .form-body::-webkit-scrollbar {
   width: 8px;
 }
 
-.whats-app-form .form-body::-webkit-scrollbar-track {
+.open .form-body::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
 
-.whats-app-form .form-body::-webkit-scrollbar-thumb {
+.open .form-body::-webkit-scrollbar-thumb {
   background-color: #c1c1c1;
   border-radius: 5px;
 }
 
-.whats-app-form .form-body label {
+.open .form-body label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,7 +63,7 @@
   font-size: 15px;
 }
 
-.whats-app-form .form-body input {
+.open .form-body input {
   padding: 8px 10px;
   margin-bottom: 5px;
   width: calc( 100% - 20px);
@@ -70,7 +71,7 @@
   border-radius: 5px;
 }
 
-.whats-app-form .form-body .checkbox {
+.open .form-body .checkbox {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
@@ -80,7 +81,7 @@
   width: 90%;
 }
 
-.whats-app-form .form-body .checkbox input {
+.open .form-body .checkbox input {
   margin: 0px;
   width: auto;
   -ms-flex-item-align: center;
@@ -88,18 +89,18 @@
       align-self: center;
 }
 
-.whats-app-form .form-body .checkbox p {
+.open .form-body .checkbox p {
   font-size: 14px;
 }
 
-.whats-app-form .form-body button {
+.open .form-body button {
   display: -ms-grid;
   display: grid;
   width: calc( 100% - 20px);
   border: none;
 }
 
-.whats-app-form .form-body button a {
+.open .form-body button a {
   padding: 12px;
   width: 100%;
   color: #fff;
@@ -109,11 +110,11 @@
   text-decoration: none;
 }
 
-.whats-app-form .form-body button a:hover {
+.open .form-body button a:hover {
   background-color: #5cb85c;
 }
 
-.whats-app-form .form-footer {
+.open .form-footer {
   padding: 5px;
   background-color: #fff;
   text-align: center;
@@ -121,11 +122,11 @@
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.whats-app-form .form-footer p {
+.open .form-footer p {
   font-size: 14px;
 }
 
-.whats-app-button {
+button.whats-app-button {
   position: fixed;
   left: 20px;
   bottom: 20px;
@@ -136,17 +137,18 @@
   grid-gap: 5px;
   padding: 13px 20px;
   background-color: #075E54;
+  border: none;
   border-radius: 50px;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.35);
 }
 
-.whats-app-button img {
+button.whats-app-button img {
   width: 25px;
   height: auto;
 }
 
-.whats-app-button p {
+button.whats-app-button p {
   color: #fff;
   font-size: 16px;
   -ms-flex-item-align: center;
