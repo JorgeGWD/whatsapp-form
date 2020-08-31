@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import './whatsAppForm.css'
 import WhatsAppImg from '../../assets/icon_whatsapp.png'
 import useForm from './useForm'
+import validate from './validateInfo'
 
 const WhatsAppForm = () => {
 
-    const { handleChange, values, handleSubmit } = useForm()
+    const { handleChange, values, handleSubmit, errors } = useForm(validate)
 
     const [open, setOpen] = useState(false)
 
@@ -25,14 +26,17 @@ const WhatsAppForm = () => {
                     <p>Para comunicarte con un asesor <br/> necesitamos los siguientes datos</p>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="">Nombre</label>
-                        <input type="text" name="name" value={values.name} placeholder="Escribe aquí" onChange={handleChange} />
+                        <input type="text" name="username" value={values.username} placeholder="Escribe aquí" onChange={handleChange} />
+                        {errors.username && <p>{errors.username}</p>}
                         <label htmlFor="">Correo eléctronico</label>
                         <input type="email" name="email" value={values.email} placeholder="Escribe aquí" onChange={handleChange} />
+                        {errors.email && <p>{errors.email}</p>}
                         <label htmlFor="">Nº de WhatsApp</label>
                         <input type="tel" name="phone" value={values.phone} placeholder="321 1234567" onChange={handleChange}  />
+                        {errors.phone && <p>{errors.phone}</p>}
                         <div className="checkbox">
                             <input type="checkbox" />
-                            <p>He leído y acepto la política de privacidad</p>
+                            <p className="checkbox-text">He leído y acepto la política de privacidad</p>
                         </div>
                         <button type="submit">
                                 Iniciar Chat

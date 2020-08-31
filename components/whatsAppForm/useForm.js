@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
-const useForm = () => {
+const useForm = (validate) => {
 
     const [ values, setValues ] = useState({
-        name: '',
+        username: '',
         email: '',
         phone: '',
         checkbox: ''
@@ -22,11 +22,12 @@ const useForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit();
-        window.open("https://api.whatsapp.com/send?phone=577448989", "_blank");
+        setErrors(validate(values))
+        //onSubmit();
+        //window.open("https://api.whatsapp.com/send?phone=577448989", "_blank");
     }
 
-    return {handleChange, values, handleSubmit}
+    return {handleChange, values, handleSubmit, errors}
 }
 
 export default useForm
