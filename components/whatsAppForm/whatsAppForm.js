@@ -4,12 +4,31 @@ import WhatsAppImg from '../../assets/icon_whatsapp.png'
 
 const WhatsAppForm = () => {
 
-    const [ data, useData ] = useState();
+    const [ data, useData ] = useState({
+        name: '',
+        email: '',
+        phone: [],
+        checkbox: false
+    });
 
-    const [open, setOpen] = React.useState(false)
+    const [open, setOpen] = useState(false)
 
-    const onSubmit = (e) => {
+    const handleChange = (e) => {
+        console.log(e.target.value)
+        useData({
+            ...data,
+            [e.target.name] : e.target.value
+        })
+    }
+
+    const handleSubmit = (e) => {
         e.preventDefault();
+        onSubmit();
+        window.open("https://api.whatsapp.com/send?phone=577448989", "_blank")
+    }
+
+    function onSubmit() {
+        console.log('Submitted Succesfully')
     }
 
     return (
@@ -18,25 +37,23 @@ const WhatsAppForm = () => {
                 <div className="form-header">
                     <img src={WhatsAppImg} alt="WhatsApp"/>
                     <p>WhatsApp</p>
-                    <p onClick={() => { setOpen(!open); }}>X</p>
+                    <p className="btn-close" onClick={() => { setOpen(!open); }}>X</p>
                 </div>
                 <div className="form-body">
                     <p>Para comunicarte con un asesor <br/> necesitamos los siguientes datos</p>
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <label htmlFor="">Nombre</label>
-                        <input type="text" name="name" placeholder="Escribe aquí" required />
+                        <input type="text" name="name" placeholder="Escribe aquí" onChange={handleChange} />
                         <label htmlFor="">Correo eléctronico</label>
-                        <input type="email" name="email" placeholder="Escribe aquí" required />
+                        <input type="email" name="email" placeholder="Escribe aquí" onChange={handleChange} />
                         <label htmlFor="">Nº de WhatsApp</label>
-                        <input type="tel" name="phone" placeholder="321 1234567" required />
+                        <input type="tel" name="phone" placeholder="321 1234567" onChange={handleChange}  />
                         <div className="checkbox">
-                            <input type="checkbox" required />
+                            <input type="checkbox" />
                             <p>He leído y acepto la política de privacidad</p>
                         </div>
                         <button type="submit">
-                            <a href="https://api.whatsapp.com/send?phone=577448989" target="_blank">
                                 Iniciar Chat
-                            </a>
                         </button>
                     </form>
                 </div>

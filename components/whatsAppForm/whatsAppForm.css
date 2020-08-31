@@ -37,6 +37,10 @@
       align-self: center;
 }
 
+.whats-app-form .form-header p.btn-close {
+  cursor: pointer;
+}
+
 .whats-app-form .form-body {
   padding: 18px 15px;
   height: 340px;
@@ -69,7 +73,7 @@
 .whats-app-form .form-body input {
   padding: 8px 10px;
   margin-bottom: 5px;
-  width: calc( 100% - 20px);
+  width: calc( 100% - 22px);
   border: 1px solid #c4c4c4;
   border-radius: 5px;
 }
@@ -97,23 +101,23 @@
 }
 
 .whats-app-form .form-body button {
-  display: -ms-grid;
-  display: grid;
-  width: calc( 100% - 20px);
-  border: none;
-}
-
-.whats-app-form .form-body button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 12px;
   width: 100%;
   color: #fff;
   font-size: 18px;
   background-color: #277727;
+  border: none;
   border-radius: 5px;
-  text-decoration: none;
+  cursor: pointer;
 }
 
-.whats-app-form .form-body button a:hover {
+.whats-app-form .form-body button:hover {
   background-color: #5cb85c;
 }
 
@@ -131,6 +135,7 @@
 
 .whats-app-form.hide {
   bottom: 0px;
+  visibility: hidden;
   opacity: 0;
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;

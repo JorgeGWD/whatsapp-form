@@ -23,6 +23,8 @@
             color: #fff
             font-size: 18px
             align-self: center
+            &.btn-close
+                cursor: pointer
     .form-body
         padding: 18px 15px
         height: 340px
@@ -43,7 +45,7 @@
         input
             padding: 8px 10px
             margin-bottom: 5px
-            width: calc( 100% - 20px )
+            width: calc( 100% - 22px )
             border: 1px solid #c4c4c4
             border-radius: 5px
         .checkbox
@@ -59,21 +61,18 @@
             p
                 font-size: 14px
         button
-            display: grid
-            //padding: 12px
-            width: calc( 100% - 20px )
+            display: flex
+            justify-content: center
+            padding: 12px
+            width: 100%
+            color: #fff
+            font-size: 18px
+            background-color: #277727
             border: none
-            // cursor: pointer
-            a
-                padding: 12px
-                width: 100%
-                color: #fff
-                font-size: 18px
-                background-color: #277727
-                border-radius: 5px
-                text-decoration: none
-                &:hover
-                    background-color: #5cb85c
+            border-radius: 5px
+            cursor: pointer
+            &:hover
+                background-color: #5cb85c
     .form-footer
         padding: 5px
         background-color: #fff
@@ -83,6 +82,7 @@
             font-size: 14px
     &.hide
         bottom: 0px
+        visibility: hidden
         opacity: 0
         transition: all .2s ease-out
 
